@@ -1,0 +1,19 @@
+# Proyecto: Sistema ZZZ
+#
+# Base de datos postgresql
+# Versión de postgresql: 12.3
+#
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Template de cloudformation para Crear una base de datos RDS en AMAZON AWS
+Resources:
+
+  RDSDatabase:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBName: "mi_base_de_datos"
+      DBInstanceClass: "db.t2.micro" # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html
+      Engine: "postgres"
+      EngineVersion: "12.3"
+      MasterUsername: "dbadmin"
+      MasterUserPassword: "mi_password_secreto"
+      AllocatedStorage: 20 # espacio necesario en gigabytes

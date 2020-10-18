@@ -1,0 +1,31 @@
+@startuml
+
+skinparam class {
+   BackgroundColor White
+   ArrowColor Black
+   BorderColor Black
+}
+
+class Entity {
+			id : STRING
+}
+
+class Doctor {
+			password : STRING
+			userName : STRING
+}
+Person <|-- Doctor
+
+class Patient {
+}
+Person <|-- Patient
+
+class Person {
+			name : HumanName
+			identifier : Identifier
+}
+Entity <|-- Person
+
+Interview --> "RELATED_TO" Sickness
+
+@enduml

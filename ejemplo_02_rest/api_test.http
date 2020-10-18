@@ -1,0 +1,15 @@
+// ****************** Documentación de API *******************************
+// Obtener una lista de ciudades
+
+GET http://localhost:8000/ciudades HTTP/1.1
+
+// Agregar una ciudad, datos de entrada: nombre y país de la ciudad
+
+###
+POST http://localhost:8000/ciudad HTTP/1.1
+content-type: application/json
+
+{
+    "nombre": "Nueva ciudad",
+    "pais": "De otro país"
+}
